@@ -1,0 +1,142 @@
+@import "variables";
+@import "mixins";
+
+.products {
+  width: 100%;
+
+  @media (min-width: $gridBreakpointMd) {
+    width: calc(100% - 230px);
+  }
+
+  .heading {
+    border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+    display: flex;
+    flex-direction: row;
+    align-items: flex-end;
+    justify-content: space-between;
+    padding-bottom: 24px;
+    margin-bottom: 20px;
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-end;
+    }
+
+    span {
+      font-size: 12px;
+      display: inline-block;
+      margin-top: 5px;
+
+      &::after {
+        content: "";
+        background: url('../assets/images/arrow-down.svg');
+        width: 8px;
+        height: 5px;
+        display: inline-block;
+        margin-left: 10px;
+      }
+    }
+  }
+
+  .category-name {
+    font-size: 24px;
+    margin: 0;
+  }
+
+  .products-wrapper {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px 20px;
+
+    @media (min-width: $gridBreakpointXs) {
+      grid-template-columns: 1fr 1fr;
+    }
+
+    @media (min-width: $gridBreakpointSm) {
+      grid-template-columns: 1fr 1fr 1fr;
+    }
+  }
+
+  .single-product {
+    position: relative;
+    max-width: 200px;
+    margin: 0 auto;
+
+    .additional {
+      position: absolute;
+      z-index: 2;
+      left: 0;
+      bottom: 50px;
+      background: rgba(255, 255, 255, 0.8);
+      padding: 5px;
+      font-size: 12px;
+
+      @include md {
+        bottom: 70px;
+      }
+
+      @include lg {
+        bottom: 60px;
+      }
+    }
+
+    p {
+      margin-top: 10px;
+      margin-bottom: 10px;
+      font-size: 12px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+
+      @include md {
+        font-size: 14px;
+      }
+    }
+
+    img {
+      max-width: 100%;
+      height: auto;
+    }
+
+    .discount {
+      display: flex;
+      flex-direction: row;
+      flex-shrink: 0;
+
+      span {
+        &:nth-child(1) {
+          color: var(--red);
+          margin-right: 10px;
+        }
+
+        &:nth-child(2) {
+          text-decoration: line-through;
+          color: rgba(0, 0, 0, .5)
+        }
+      }
+    }
+
+    &.available {
+      position: relative;
+      cursor: pointer;
+
+      &::before {
+        content: "";
+        position: absolute;
+        width: calc(100% + 10px);
+        height: calc(100% + 10px);
+        left: -7px;
+        top: -7px;
+        border: 2px solid var(--blue);
+        animation: blink 1s step-start 0s infinite;
+      }
+    }
+
+    &:not(.available) {
+      animation: fadeOut 1s;
+      animation-delay: .5s;
+      animation-fill-mode: forwards;
+    }
+  }
+}

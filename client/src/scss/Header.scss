@@ -1,0 +1,34 @@
+header {
+  min-height: 77px;
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  border-bottom: 1px solid #E5E5E5;
+
+  .logo-wrapper {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-start;
+    align-items: center;
+    cursor: pointer;
+
+    .logo {
+      width: 50px;
+      height: 32px;
+      background: url('../assets/images/bm.svg') no-repeat center;
+    }
+
+    span {
+      color: var(--dark-blue);
+      display: inline-block;
+      margin-left: 40px;
+    }
+  }
+
+  .header-main {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+  }
+}

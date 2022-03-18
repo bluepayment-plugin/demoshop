@@ -1,0 +1,39 @@
+.return-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+
+  .success-wrapper,
+  .error-wrapper,
+  .loader {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 100px;
+    margin-bottom: 100px;
+    min-width: 200px;
+    min-height: 200px;
+
+    p {
+      font-size: 14px;
+    }
+  }
+
+  .loader {
+    #spinning {
+      animation: rotating 2s linear infinite;
+      transform-box: fill-box;
+      transform-origin: center;
+    }
+
+    p {
+      font-size: 14px;
+    }
+  }
+}
+
+@keyframes rotating {
+  to {
+    transform: rotate(360deg);
+  }
+}

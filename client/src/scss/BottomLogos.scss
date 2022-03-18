@@ -1,0 +1,41 @@
+@import "mixins";
+
+.bottom-logos-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  flex-wrap: wrap;
+  margin: 0;
+
+  @include md {
+    margin: 0 0 20px;
+    justify-content: space-between;
+  }
+
+  &.with-margin {
+    margin-top: 40px;
+  }
+
+  img {
+    margin: 0 20px 20px;
+  }
+
+  div {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin: 0 20px 20px;
+
+    span {
+      font-size: 12px;
+      display: inline-block;
+      margin-right: 15px;
+    }
+
+    img {
+      margin: 0;
+    }
+  }
+}
+

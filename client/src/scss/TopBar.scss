@@ -1,0 +1,67 @@
+@import "mixins";
+
+.top-bar-wrapper {
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 20px;
+  margin-bottom: 25px;
+
+  > div {
+    &:nth-child(2) {
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+  }
+
+  .search {
+    border-bottom: 1px solid #000;
+    font-size: 16px;
+    min-width: 125px;
+    padding: 5px 0;
+    margin-right: 25px;
+    background: url('../assets/images/search.svg') no-repeat right center;
+
+    @include md {
+      min-width: 155px;
+    }
+  }
+
+  .shopping-cart {
+    width: 24px;
+    height: 24px;
+    background: url('../assets/images/shopping-cart.svg') no-repeat center;
+    position: relative;
+    cursor: pointer;
+    margin-right: 20px;
+
+    @include xs {
+      margin-right: 0;
+    }
+
+    .counter {
+      position: absolute;
+      cursor: pointer;
+      right: -20px;
+      top: -10px;
+      background: var(--light-blue);
+      border-radius: 50%;
+      color: #fff;
+      width: 20px;
+      height: 20px;
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      justify-content: center;
+      font-size: 12px;
+    }
+  }
+
+  .store-name {
+    font-size: 18px;
+    font-weight: 700;
+  }
+}

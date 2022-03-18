@@ -1,0 +1,264 @@
+@import "mixins";
+
+.product {
+  width: 100%;
+
+  @include md {
+    width: calc(100% - 230px);
+  }
+
+  .product-name {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-end;
+    margin-bottom: 24px;
+
+    > div {
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+
+      span {
+        font-size: 12px;
+
+        &.reviews-count {
+          display: inline-block;
+          margin: 0 15px;
+        }
+      }
+
+      .reviews {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+    }
+
+    p {
+      font-size: 24px;
+      margin: 0;
+    }
+  }
+
+  .actions {
+    display: flex;
+    flex-direction: column;
+
+    @include xs {
+      flex-direction: row;
+    }
+
+    .left-side {
+      @include xs {
+        margin-right: 20px;
+      }
+
+      img {
+        max-width: 100%;
+        height: auto;
+      }
+
+      .thumbnails {
+        margin-top: 10px;
+        margin-bottom: 5px;
+
+        img {
+          margin-right: 10px;
+        }
+      }
+    }
+
+    .right-side {
+      flex-shrink: 0;
+
+      .sizes {
+        p {
+          font-size: 12px;
+        }
+
+        .sizes-wrapper {
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+
+          a {
+            font-size: 10px;
+            color: var(--light-blue);
+          }
+        }
+
+        button {
+          width: 26px;
+          height: 26px;
+          padding: 0;
+          font-size: 10px;
+          margin-right: 8px;
+          background: transparent;
+          border: 1px solid rgba(0, 0, 0, .25);
+
+          &:disabled {
+            border: 1px solid rgba(0, 0, 0, .1);
+          }
+
+          &.selected {
+            border: 2px solid var(--blue);
+          }
+        }
+      }
+
+      .add-to-cart-wrapper {
+        margin-top: 25px;
+        display: flex;
+        flex-direction: row;
+        align-items: center;
+
+        button {
+          &.add {
+            background: var(--light-blue);
+            font-size: 14px;
+            font-weight: 700;
+            padding: 15px 20px;
+            border: none;
+            color: #fff;
+            cursor: pointer;
+            position: relative;
+            margin-right: 30px;
+
+            &::before {
+              content: "";
+              position: absolute;
+              width: calc(100% + 10px);
+              height: calc(100% + 10px);
+              left: -7px;
+              top: -7px;
+              border: 2px solid var(--blue);
+              animation: blink 1s step-start 0s infinite;
+            }
+          }
+
+          &.wish {
+            background: url(../assets/images/heart.svg) no-repeat center;
+            border: 2px solid var(--light-blue);
+            width: 48px;
+            height: 48px;
+          }
+        }
+      }
+
+      .order-now {
+        border: 1px solid rgba(0, 0, 0, 0.12);
+        padding: 20px;
+        margin-top: 20px;
+        margin-bottom: 10px;
+
+        p {
+          position: relative;
+          margin: 0;
+          padding: 0;
+          font-size: 12px;
+          padding-left: 20px;
+
+          &::before {
+            position: absolute;
+            left: 0;
+            top: 2px;
+            content: "";
+            width: 12px;
+            height: 12px;
+            background: var(--green);
+            border-radius: 50%;
+          }
+
+          span {
+            display: block;
+          }
+        }
+      }
+    }
+  }
+
+  .details {
+    h3 {
+      font-size: 18px;
+      border-bottom: 1px solid rgba(0, 0, 0, 0.12);
+      padding-bottom: 10px;
+      margin-top: 10px;
+
+      &.also-like {
+        font-size: 24px;
+        border-bottom: none;
+      }
+    }
+
+    p {
+      font-size: 14px;
+    }
+
+    ul {
+      margin: 0;
+      padding: 0;
+      list-style: none;
+
+      li {
+        font-size: 14px;
+        line-height: 50px;
+        display: flex;
+        flex-direction: row;
+
+        img {
+          margin-right: 20px;
+        }
+      }
+    }
+
+    .like-wrapper {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+
+      @include xs {
+        flex-direction: row;
+        justify-content: space-between;
+        align-items: center;
+      }
+
+      > div {
+        position: relative;
+        max-width: 200px;
+        margin: 0 10px;
+
+        @include lg {
+          margin: 0;
+        }
+
+        img {
+          max-width: 100%;
+          height: auto;
+        }
+
+        span {
+
+          &.additional {
+            position: absolute;
+            z-index: 2;
+            left: 0;
+            bottom: 50px;
+            background: rgba(255, 255, 255, 0.8);
+            padding: 5px;
+            font-size: 12px;
+          }
+        }
+      }
+
+      p {
+        display: flex;
+        flex-direction: row;
+        justify-content: space-between;
+        font-size: 14px;
+        margin: 10px 0;
+      }
+    }
+  }
+}

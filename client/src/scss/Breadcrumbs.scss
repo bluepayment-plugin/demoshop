@@ -1,0 +1,39 @@
+@import "mixins";
+
+.breadcrumbs-wrapper {
+  padding: 20px 0;
+  display: flex;
+  flex-direction: column-reverse;
+  align-items: flex-start;
+
+  @include xs {
+    flex-direction: row;
+    align-items: flex-end;
+  }
+
+  @include md {
+    margin-top: 30px;
+  }
+
+  ul {
+    list-style: none;
+    margin: 10px 0 0;
+    padding: 0;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+
+    li {
+      display: flex;
+      flex-direction: row;
+      color: rgba(60, 60, 70, 0.7);
+      font-size: 12px;
+      align-items: center;
+      padding: 0 3px;
+
+      &:nth-child(1) {
+        margin-right: 10px;
+      }
+    }
+  }
+}

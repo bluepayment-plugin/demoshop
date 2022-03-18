@@ -1,0 +1,95 @@
+@import "mixins";
+
+.main {
+  display: flex;
+  flex-direction: column;
+
+  @include md {
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: flex-start;
+  }
+
+  .sidebar {
+    display: none;
+    width: 190px;
+    margin-top: 52px;
+
+    @include md {
+      display: block;
+    }
+
+    .menu {
+      box-shadow: 0 0 16px rgba(0, 0, 0, 0.12);
+      padding: 10px 0;
+
+      > ul {
+        > li {
+          background: url('../assets/images/arrow.svg') no-repeat left 20px top 14px;
+          padding: 10px 20px 10px 40px;
+
+          &:nth-child(1) {
+            padding-bottom: 0;
+          }
+        }
+      }
+
+      ul {
+        margin: 0;
+        padding: 0;
+        list-style: none;
+
+        li {
+          font-size: 12px;
+          display: block;
+
+          &.active {
+            font-weight: 700;
+          }
+
+          ul {
+            li {
+              padding: 10px 0 5px 15px;
+            }
+          }
+        }
+      }
+    }
+
+    .filter-wrapper {
+      margin-top: 35px;
+      position: relative;
+
+      p {
+        font-size: 12px;
+        font-weight: 700;
+      }
+
+      .filter {
+        display: flex;
+        flex-direction: column;
+
+        div {
+          position: relative;
+          margin-bottom: 10px;
+          height: 24px;
+          display: flex;
+          flex-direction: row;
+          align-items: center;
+          padding-left: 40px;
+          font-size: 14px;
+
+          &::before {
+            content: "";
+            position: absolute;
+            width: 24px;
+            height: 24px;
+            border: 1px solid rgba(60, 60, 70, 0.28);
+            left: 0;
+            top: 0;
+          }
+        }
+      }
+    }
+  }
+}
