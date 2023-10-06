@@ -1,25 +1,25 @@
 <p align="center">
-  <a href="https://bluemedia.pl/" target="blank" style="margin-right: 20px;"><img src="https://bluemedia.pl/storage/loga/logo-blue-media.svg" width="220" alt="Blue Media Logo" /></a>
+  <a href="https://autopay.pl/" target="blank" style="margin-right: 20px;"><img src="https://autopay.pl/storage/template/ap/images/logo_autopay.svg" width="220" alt="Autopay Logo" /></a>
   <a href="http://nestjs.com/" target="blank"><img src="https://nestjs.com/img/logo_text.svg" width="320" alt="Nest Logo" /></a>
 </p>
 
-# Przykładowy backend do integracji z bramką płatniczą Blue Media S.A.
+# Przykładowy backend do integracji z bramką płatniczą Autopay S.A.
 
 ## Opis
-Backend przykładowego sklepu oparty na frameworku NestJS przeznaczony do integracji z testową bramką płatniczą Blue Media S.A.
+Backend przykładowego sklepu oparty na frameworku NestJS przeznaczony do integracji z testową bramką płatniczą Autopay S.A.
 
 ## Przygotowanie
 - Krok nr 1: należy zainstalować środowisko Node.JS, dostępne pod adresem [Node.JS download](https://nodejs.org/en/download/).
 - Krok nr 2: należy skopiować repozytorium do lokalnego katalogu
-- Krok nr 3: w pliku app.controller.ts należy podmienić zapisane wartości serviceID, secretKey oraz separator, na wartości podane przez Blue Media S.A. podczas rejestracji w systemie płatności.
+- Krok nr 3: w pliku app.controller.ts należy podmienić zapisane wartości serviceID, secretKey oraz separator, na wartości podane przez Autopay S.A. podczas rejestracji w systemie płatności.
 ```bash
-// identyfikator klienta nadany przez Blue Media S.A.
+// identyfikator klienta nadany przez Autopay S.A.
 const serviceID = '000000';
 
-// klucz współdzielony nadany przez Blue Media S.A.
+// klucz współdzielony nadany przez Autopay S.A.
 const secretKey = 'partner_secret_key';
 
-// separator nadany przez Blue Media S.A.
+// separator nadany przez Autopay S.A.
 const separator = 'separator';
 ```
 
@@ -146,4 +146,4 @@ $ npm run start:prod
 Tak jak w przypadku uruchomienia lokalnego, uruchomienie produkcyjne stworzy API na porcie 3000. Należy pamiętać, aby dopuścić ruch na porcie 3000 lub przekierować ruch z portu głównego 80 na port 3000.
 
 ## Wsparcie techniczne
-W przypadku problemów z uruchomieniem, prosimy o kontakt z naszym [Centrum Pomocy Blue Media](https://bluemedia.pl/kontakt)
+W przypadku problemów z uruchomieniem, prosimy o kontakt z naszym [Centrum Pomocy Autopay](https://autopay.pl/kontakt)

@@ -101,7 +101,7 @@
           </div>
         </div>
         <button @click="checkout" :disabled="processing">
-          <span>Potwierdź i zapłać używając Blue Media</span>
+          <span>Potwierdź i zapłać używając Autopay</span>
           <i class="loader" v-if="processing"></i>
         </button>
       </div>

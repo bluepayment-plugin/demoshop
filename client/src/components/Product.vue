@@ -69,7 +69,7 @@
     <div class="details">
       <h3>Opis produktu</h3>
       <p>
-        Biała koszulka damska z krótkim rękawem i dużym, kontrastowym nadrukiem z logo Blue Media z przodu.
+        Biała koszulka damska z krótkim rękawem i dużym, kontrastowym nadrukiem z logo Autopay z przodu.
       </p>
       <h3>Skład i konserwacja</h3>
       <p>

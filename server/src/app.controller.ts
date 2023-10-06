@@ -9,13 +9,13 @@ import { TransactionInterface } from "./interfaces/transaction.interface";
 // adres testowej bramki płatniczej
 const testPaywallUrl = 'https://pay-accept.bm.pl/payment';
 
-// identyfikator klienta nadany przez Blue Media S.A.
+// identyfikator klienta nadany przez Autopay S.A.
 const serviceID = '000000';
 
-// klucz współdzielony nadany przez Blue Media S.A.
+// klucz współdzielony nadany przez Autopay S.A.
 const secretKey = 'partner_secret_key';
 
-// separator nadany przez Blue Media S.A.
+// separator nadany przez Autopay S.A.
 const separator = 'separator';
 
 @Controller('api')

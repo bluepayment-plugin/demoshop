@@ -1,8 +1,8 @@
 <p align="center">
-  <a href="https://bluemedia.pl/" target="blank" style="margin-right: 20px;"><img src="https://bluemedia.pl/storage/loga/logo-blue-media.svg" width="220" alt="Blue Media Logo" /></a>
+  <a href="https://autopay.pl/" target="blank" style="margin-right: 20px;"><img src="https://autopay.pl/storage/template/ap/images/logo_autopay.svg" width="220" alt="Autopay Logo" /></a>
 </p>
 
-# Przykładowy sklep internetowy ze zintegrowaną Bramką Płatniczą Blue Media S.A.
+# Przykładowy sklep internetowy ze zintegrowaną Bramką Płatniczą Autopay S.A.
 
 ## Opis
 Sklep internetowy przygotowany przy użyciu technologii Vue.js
